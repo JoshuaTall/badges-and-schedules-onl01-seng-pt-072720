@@ -7,7 +7,7 @@ def batch_badge_creator(attendees)
   attendees.each do |name|
     badges.push "Hello, my name is #{name}."
   end
-  badges
+  return badges
 end 
 
 def assign_rooms(attendees)
@@ -15,7 +15,7 @@ def assign_rooms(attendees)
   attendees.each_with_index do |name, index|
     rooms.push "Hello, #{name}! You'll be assigned to room #{index + 1}!"
   end
-  rooms
+  return rooms
 end
 
 def printer(attendees)
@@ -24,7 +24,7 @@ def printer(attendees)
     puts badge
   end
   assign_rooms(attendees)
-  rooms.each_with_index do |room|
+  rooms.each do |room|
     puts room
   end
 end
